@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="100dp" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="700dp" android:minHeight="700dp">
+    <EditText android:textColor="@android:color/white" android:textColorHint="@android:color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/ed_txt_dialog" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Enter Text" android:maxLines="1" android:singleLine="true" android:imeOptions="actionDone"/>
+</LinearLayout>

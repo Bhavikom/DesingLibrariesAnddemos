@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="compress_percent">
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+    </array>
+    <array name="feedback_title_list">
+        <item>It&apos;s working great</item>
+        <item>Problem with Video Recording</item>
+        <item>Problem with Taking Screenshot</item>
+        <item>Problem with Youtube upload</item>
+        <item>Problem with Trim function</item>
+        <item>Suggest a new feature</item>
+        <item>Any other feedback</item>
+    </array>
+    <array name="feedback_title_list2">
+        <item>It&apos;s working great</item>
+        <item>Problem with Video Recording</item>
+        <item>Problem with Taking Screenshot</item>
+        <item>Problem with Youtube upload</item>
+        <item>Problem with Trim function</item>
+        <item>Suggest a new feature</item>
+        <item>Any other feedback</item>
+    </array>
+    <array name="id_facebook_live_privacy_types">
+        <item>Public</item>
+        <item>Friends</item>
+        <item>Friends of Friends</item>
+        <item>Only Me</item>
+    </array>
+    <array name="id_facebook_live_stream_on_options">
+        <item>Live stream on timeline</item>
+        <item>Live stream on page</item>
+    </array>
+    <array name="id_youtube_live_privacy_types">
+        <item>Public</item>
+        <item>Private</item>
+        <item>Unlisted</item>
+    </array>
+    <array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </array>
+    <array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
+    <array name="material_colors">
+        <item>#ffffff</item>
+        <item>#f44336</item>
+        <item>#9c27b0</item>
+        <item>#00318c</item>
+        <item>#3f51b5</item>
+        <item>#03a9f4</item>
+        <item>#009688</item>
+        <item>#8bc34a</item>
+        <item>#ffeb3b</item>
+        <item>#ff9800</item>
+        <item>#795548</item>
+        <item>#607d8b</item>
+        <item>#000000</item>
+    </array>
+    <array name="more_action_options_dialog">
+        <item>Record Audio</item>
+        <item>Record Tutorial</item>
+        <item>Record Interactive Video</item>
+    </array>
+    <array name="names">
+        <item>@string/smile_rating_terrible</item>
+        <item>@string/smile_rating_bad</item>
+        <item>@string/smile_rating_okay</item>
+        <item>@string/smile_rating_good</item>
+        <item>@string/smile_rating_great</item>
+    </array>
+    <array name="pref_bit_rate_list_titles">
+        <item>12 Mbps</item>
+        <item>8 Mbps</item>
+        <item>7.5 Mbps</item>
+        <item>5 Mbps</item>
+        <item>4 Mbps</item>
+        <item>2.5 Mbps</item>
+        <item>1.5 Mbps</item>
+        <item>1 Mbps</item>
+    </array>
+    <array name="pref_bit_rate_list_values">
+        <item>12000000</item>
+        <item>8000000</item>
+        <item>7500000</item>
+        <item>5000000</item>
+        <item>4000000</item>
+        <item>2500000</item>
+        <item>1500000</item>
+        <item>1000000</item>
+    </array>
+    <array name="pref_count_down_list_titles">
+        <item>No CountDown</item>
+        <item>3s</item>
+        <item>5s</item>
+        <item>10s</item>
+    </array>
+    <array name="pref_count_down_list_values">
+        <item>@null</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+    </array>
+    <array name="pref_frame_rate_list_titles">
+        <item>60 FPS</item>
+        <item>50 FPS</item>
+        <item>48 FPS</item>
+        <item>30 FPS</item>
+        <item>25 FPS</item>
+    </array>
+    <array name="pref_frame_rate_list_values">
+        <item>60</item>
+        <item>50</item>
+        <item>48</item>
+        <item>30</item>
+        <item>25</item>
+    </array>
+    <array name="pref_long_click_list_titles">
+        <item>No Action</item>
+        <item>Recording</item>
+        <item>Interactive Recording</item>
+        <item>Screenshot</item>
+        <item>Gallery</item>
+        <item>Settings</item>
+    </array>
+    <array name="pref_long_click_list_values">
+        <item>@null</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
+    <array name="pref_orientation_list_titles">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>LandScape</item>
+    </array>
+    <array name="pref_orientation_list_values">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>LandScape</item>
+    </array>
+    <array name="pref_recorder_type_titles">
+        <item>Recorder Type 1 (Simple)</item>
+        <item>Recorder Type 2 (Advanced and supports Pause)</item>
+    </array>
+    <array name="pref_recorder_type_values">
+        <item>1</item>
+        <item>2</item>
+    </array>
+    <array name="pref_resolution_list_titles">
+        <item>2960x1440</item>
+        <item>2560x1440</item>
+        <item>2220x1080</item>
+        <item>2048x1536</item>
+        <item>1920x1080</item>
+        <item>1280x720</item>
+        <item>1024x600</item>
+        <item>854x480</item>
+        <item>640x360</item>
+        <item>426x240</item>
+    </array>
+    <array name="pref_resolution_list_values">
+        <item>2960</item>
+        <item>2560</item>
+        <item>2220</item>
+        <item>2048</item>
+        <item>1920</item>
+        <item>1280</item>
+        <item>1024</item>
+        <item>854</item>
+        <item>640</item>
+        <item>426</item>
+    </array>
+    <array name="pref_storage_location">
+        <item>Internal</item>
+        <item>SD Card</item>
+    </array>
+    <array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </array>
+    <array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </array>
+</resources>

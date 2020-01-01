@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engine/engine.iml" filepath="$PROJECT_DIR$/engine/engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mnml-master.iml" filepath="$PROJECT_DIR$/mnml-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notifications/notifications.iml" filepath="$PROJECT_DIR$/notifications/notifications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testutil/testutil.iml" filepath="$PROJECT_DIR$/testutil/testutil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/theming/theming.iml" filepath="$PROJECT_DIR$/theming/theming.iml" />
+    </modules>
+  </component>
+</project>

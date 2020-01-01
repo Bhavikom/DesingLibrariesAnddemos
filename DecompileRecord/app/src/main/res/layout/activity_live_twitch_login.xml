@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/appbar" android:paddingBottom="0.5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="15" app:popupTheme="@style/AppTheme.PopupOverlay" style="@style/ToolBarStyle.Event"/>
+        <ProgressBar android:id="@+id/id_live_twitch_login_progress" android:layout_width="match_parent" android:layout_height="2dp" android:maxHeight="2dp" android:max="100" android:progressTint="@android:color/white" android:progressBackgroundTint="@android:color/darker_gray" style="@style/Widget.ProgressBar.Horizontal"/>
+    </android.support.design.widget.AppBarLayout>
+    <WebView android:id="@+id/id_live_twitch_login_webView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

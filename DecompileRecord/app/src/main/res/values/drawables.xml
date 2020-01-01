@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="dim_80_background_color">#cc000000</drawable>
+    <drawable name="id_explainer_video_normal_color">#00ffffff</drawable>
+    <drawable name="id_explainer_video_selected_color">#80ff3d3d</drawable>
+    <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+</resources>

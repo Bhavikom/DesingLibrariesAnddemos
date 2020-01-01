@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/tst" android:background="@color/dim_80_background_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:id="@+id/lay_main" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30dp" android:layout_marginBottom="30dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp">
+        <LinearLayout android:gravity="center" android:id="@+id/linearLayout" android:background="@color/colorPrimary" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_launcher"/>
+            <TextView android:textSize="22sp" android:textColor="@color/colorWhite" android:gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/app_name" android:maxLines="1" android:singleLine="true" android:layout_weight="1" android:fontFamily="sans-serif-light" android:paddingStart="5dp"/>
+            <ImageView android:id="@+id/img_more" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout2" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ad_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.5">
+                <com.google.android.gms.ads.formats.UnifiedNativeAdView android:id="@+id/id_install_native_ad_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="2dp" android:layout_marginBottom="5dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp">
+                    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                        <FrameLayout android:layout_gravity="top|center_vertical|center_horizontal|center" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <com.google.android.gms.ads.formats.MediaView android:id="@+id/id_native_ad_dialog_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </FrameLayout>
+                        <TextView android:textSize="9sp" android:textColor="@android:color/white" android:background="#ffb017" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_ad_tag_txt"/>
+                        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="#bf000000" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@+id/id_native_ad_dialog_icon" android:layout_width="70dp" android:layout_height="70dp" android:adjustViewBounds="true"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingStart="5dp" android:paddingEnd="5dp">
+                                <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/id_native_ad_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                                <TextView android:textSize="12sp" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/id_native_ad_dialog_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+                            </LinearLayout>
+                            <Button android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@+id/id_native_ad_dialog_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="#3fbe9c"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+            </LinearLayout>
+            <FrameLayout android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.5">
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/ic_rounded_white_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@android:color/white" android:id="@+id/id_audio_dialog_recording_name" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Recorded Audio Name" android:layout_weight="1"/>
+                        <com.ezscreenrecorder.p004ui.PlayPauseView android:id="@+id/id_audio_dialog_play_pause_button" android:focusable="true" android:clickable="true" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginStart="30dp" android:stateListAnimator="@animator/button_elevation" app:fill_color="@android:color/white" app:pause_bg="@color/colorPrimary" app:play_bg="@color/colorPrimaryDark"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                        <TextView android:textColor="@android:color/white" android:id="@+id/id_audio_dialog_on_going_time_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00"/>
+                        <android.support.p003v7.widget.AppCompatSeekBar android:id="@+id/id_audio_dialog_seekbar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="15dp" android:layout_marginEnd="15dp"/>
+                        <TextView android:textColor="@android:color/white" android:id="@+id/id_audio_dialog_max_time_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout2" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+            <ImageButton android:id="@+id/img_share_video" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_share_new" android:tint="@android:color/white" android:layout_weight="1"/>
+            <View android:background="@color/colorPrimaryDark" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageButton android:id="@+id/img_delete_video" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_delete_new" android:tint="@android:color/white" android:layout_weight="1"/>
+            <View android:id="@+id/view_like_rate" android:background="@color/colorPrimaryDark" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageButton android:id="@+id/img_like_rate" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_like_share" android:tint="@android:color/white" android:layout_weight="1"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

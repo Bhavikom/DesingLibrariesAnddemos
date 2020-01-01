@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="15" app:popupTheme="@style/AppTheme.PopupOverlay" style="@style/ToolBarStyle.Event"/>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.p003v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" app:cardCornerRadius="5dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <p008de.hdodenhof.circleimageview.CircleImageView android:id="@+id/id_live_youtube_settings_profile_image" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/ic_live_youtube"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+                        <android.support.p003v7.widget.AppCompatTextView android:textStyle="bold" android:id="@+id/id_live_youtube_settings_profile_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <android.support.p003v7.widget.AppCompatTextView android:textSize="10sp" android:id="@+id/id_live_youtube_settings_profile_gender" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.p003v7.widget.CardView>
+            <android.support.p003v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" app:cardCornerRadius="5dp" app:contentPadding="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@+id/id_live_youtube_resolution_settings" android:background="@drawable/dialog_white_selector" android:padding="8dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_width="50dp" android:layout_height="50dp">
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_resolution" android:adjustViewBounds="true"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/resolution"/>
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:id="@+id/txt_resolution" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1920x1080"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/id_live_camera_setting" android:background="@drawable/dialog_white_selector" android:padding="8dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_width="50dp" android:layout_height="50dp">
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_camera_setting" android:adjustViewBounds="true"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Camera"/>
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Switch camera on while live streaming."/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <Switch android:id="@+id/id_camera_switch" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/id_live_youtube_logout" android:background="@drawable/dialog_white_selector" android:padding="8dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:layout_width="50dp" android:layout_height="50dp">
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_diable_floating" android:adjustViewBounds="true"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_weight="1">
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Log Out"/>
+                            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="By Logging out you would not be able to stream youtube."/>
+                        </LinearLayout>
+                        <ProgressBar android:layout_gravity="center_vertical" android:id="@+id/id_live_youtube_logout_progressbar" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleSmall"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.p003v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

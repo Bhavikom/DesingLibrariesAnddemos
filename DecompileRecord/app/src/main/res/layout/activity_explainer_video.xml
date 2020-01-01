@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_explainer_video_act_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.ezscreenrecorder.imgedit.fabric.DrawingView
+        android:id="@+id/id_explainer_color_bar_drawing_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/id_tools_card_view" />
+
+    <android.support.p003v7.widget.CardView
+        android:id="@+id/id_tools_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0">
+
+        <FrameLayout
+            android:id="@+id/id_tools_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/id_explainer_color_picker_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/id_color_bar_preview_img_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/black"
+                    android:minWidth="45dp"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintStart_toStartOf="0"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <com.ezscreenrecorder.imgedit.colorseekbar.ColorSeekBar
+                    android:id="@+id/id_color_bar_seek_bar_color"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    app:colorSeeds="@array/material_colors"
+                    app:isVertical="false"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toStartOf="@+id/id_color_bar_close_img_button"
+                    app:layout_constraintStart_toEndOf="@+id/id_color_bar_preview_img_view"
+                    app:layout_constraintTop_toTopOf="0"
+                    app:showAlphaBar="false"
+                    app:thumbHeight="20dp" />
+
+                <ImageButton
+                    android:id="@+id/id_color_bar_close_img_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_cross"
+                    android:tint="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toEndOf="0"
+                    app:layout_constraintTop_toTopOf="0" />
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/id_explainer_size_bar_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <SeekBar
+                    android:id="@+id/id_explainer_size_seek_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:max="50" />
+
+                <ImageButton
+                    android:id="@+id/id_explainer_size_bar_close_img_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_cross"
+                    android:tint="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toBottomOf="0"
+                    app:layout_constraintEnd_toEndOf="0"
+                    app:layout_constraintTop_toTopOf="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_explainer_color_bar_main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/id_explainer_color_bar_resizer_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/id_explainer_vid_button_selector"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_move_resize_grey600_24dp" />
+
+                <ImageButton
+                    android:id="@+id/id_explainer_color_bar_brush_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/id_explainer_vid_button_selector"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_explainer_brush_color_24dp" />
+
+                <ImageButton
+                    android:id="@+id/id_explainer_color_bar_eraser_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/id_explainer_vid_button_selector"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_eraser_grey600_24dp" />
+
+                <ImageButton
+                    android:id="@+id/id_explainer_color_bar_background_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_explainer_background_color_24dp" />
+
+                <ImageButton
+                    android:id="@+id/id_explainer_color_bar_clear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_explainer_clean_24dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.p003v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

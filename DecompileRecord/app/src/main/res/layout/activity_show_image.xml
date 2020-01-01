@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/activity_show_image" android:background="@android:color/black" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.ezscreenrecorder.utils.TouchImageView android:id="@+id/img_touch_image" android:layout_width="match_parent" android:layout_height="match_parent" android:adjustViewBounds="true"/>
+</FrameLayout>

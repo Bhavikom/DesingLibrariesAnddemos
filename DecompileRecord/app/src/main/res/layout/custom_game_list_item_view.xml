@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.p003v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp" app:cardElevation="3dp">
+    <LinearLayout android:orientation="horizontal" android:background="?android:attr/selectableItemBackground" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:padding="7dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.p003v7.widget.AppCompatImageView android:id="@+id/id_game_item_image_view" android:layout_width="60dp" android:layout_height="60dp" android:adjustViewBounds="true"/>
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_weight="1" android:layout_marginStart="5dp">
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="14sp" android:textColor="@android:color/black" android:id="@+id/id_game_item_title_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="12sp" android:id="@+id/id_game_item_subtitle_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+        </LinearLayout>
+        <android.support.p003v7.widget.AppCompatButton android:textColor="@android:color/holo_green_dark" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/id_game_item_action_button" android:background="@drawable/ic_game_list_install_button" android:paddingTop="-10dp" android:paddingBottom="-10dp" android:layout_width="wrap_content" android:layout_height="40dp" android:textAllCaps="false" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+</android.support.p003v7.widget.CardView>

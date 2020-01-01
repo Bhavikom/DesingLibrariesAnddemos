@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="5" app:popupTheme="@style/AppTheme.PopupOverlay" style="@style/ToolBarStyle.Event">
+            <TextView android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" android:layout_gravity="center" android:id="@+id/txt_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share"/>
+        </android.support.p003v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@+id/container_edit" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ezscreenrecorder.imgedit.ProgressWheel android:layout_width="60dp" android:layout_height="60dp" app:matProg_barColor="@color/colorWhite" app:matProg_progressIndeterminate="true"/>
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_loading_txt"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

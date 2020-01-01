@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/id_more_videos_bottom_sheet_container" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" app:behavior_hideable="true" app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <android.support.p003v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardElevation="5dp">
+        <android.support.constraint.ConstraintLayout android:orientation="horizontal" android:background="#cccccc" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="18sp" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_filters_txt" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <android.support.p003v7.widget.AppCompatButton android:textColor="@android:color/white" android:id="@+id/id_more_videos_filter_apply_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apply" android:backgroundTint="@color/colorPrimary" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.p003v7.widget.CardView>
+    <android.support.p003v7.widget.AppCompatTextView android:textSize="18sp" android:textColor="@android:color/black" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sort by"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/id_more_videos_sort_grid_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/id_more_videos_sort_type_date" android:background="?android:attr/selectableItemBackground" android:padding="5dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <android.support.p003v7.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sort_date"/>
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="14sp" android:textColor="#808080" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/id_date_txt"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/id_more_videos_sort_type_views" android:background="?android:attr/selectableItemBackground" android:padding="5dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <android.support.p003v7.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sort_view"/>
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="14sp" android:textColor="#808080" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/id_views_txt"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/id_more_videos_sort_type_alphabetic" android:background="?android:attr/selectableItemBackground" android:padding="5dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <android.support.p003v7.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sort_alphabetic"/>
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="14sp" android:textColor="#808080" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/id_alphabetic_txt"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+    <android.support.p003v7.widget.AppCompatTextView android:textSize="18sp" android:textColor="@android:color/black" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/id_filters_txt"/>
+    <AutoCompleteTextView android:id="@+id/id_more_videos_filter_auto_complete_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:hint="@string/id_search_by_country_txt" android:maxLines="1" android:inputType="text"/>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/lay_draw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_draw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true" />
+
+        <com.ezscreenrecorder.imgedit.ProgressWheel
+            android:id="@+id/progress_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:matProg_barColor="@color/colorWhite"
+            app:matProg_progressIndeterminate="true" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.p003v7.widget.AppCompatSeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:progressBackgroundTint="#50000000"
+                android:progressTint="@android:color/white"
+                android:thumbTint="@android:color/white"
+                android:visibility="gone" />
+
+            <android.support.p003v7.widget.AppCompatSeekBar
+                android:id="@+id/seek_bar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:progressBackgroundTint="#50000000"
+                android:progressTint="@android:color/white"
+                android:thumbTint="@android:color/white"
+                android:visibility="gone" />
+
+            <com.ezscreenrecorder.imgedit.colorseekbar.ColorSeekBar
+                android:id="@+id/color_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="gone"
+                app:barHeight="10dp"
+                app:colorSeeds="@array/material_colors"
+                app:isVertical="false"
+                app:showAlphaBar="false"
+                app:thumbHeight="12dp" />
+
+            <android.support.p003v7.widget.RecyclerView
+                android:id="@+id/rcyl_mask_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <android.support.p003v7.widget.RecyclerView
+            android:id="@+id/rcyl_filters_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</LinearLayout>

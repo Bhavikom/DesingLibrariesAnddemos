@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@android:id/progress">
+        <rotate android:toDegrees="360">
+            <shape android:shape="rectangle" android:innerRadiusRatio="0.5" android:thicknessRatio="5" android:thickness="1dp">
+                <solid android:color="@android:color/white"/>
+                <corners android:radius="2dp"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

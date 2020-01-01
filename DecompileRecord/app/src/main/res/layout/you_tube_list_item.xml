@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <android.support.p003v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="false">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="140dp" android:layout_height="wrap_content">
+                <ImageView android:background="@color/colorGrey" android:layout_width="match_parent" android:layout_height="80dp" android:src="@mipmap/ic_default_video" android:scaleType="center"/>
+                <ImageView android:id="@+id/img_video_thumbnail" android:layout_width="match_parent" android:layout_height="80dp"/>
+                <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" android:textSize="11sp" android:textStyle="bold" android:gravity="right" android:layout_gravity="bottom" android:id="@+id/txt_file_duration" android:background="#aa000000" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:paddingBottom="2dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="5dp" android:paddingEnd="3dp">
+                <TextView android:textSize="14sp" android:textColor="@android:color/black" android:id="@+id/txt_file_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="sans-serif-regular"/>
+                <TextView android:textAppearance="@style/TextAppearance.Compat.Notification.Time" android:textSize="11.3sp" android:id="@+id/txt_user" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:textAllCaps="false"/>
+                <LinearLayout android:gravity="bottom" android:paddingBottom="1dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textAppearance="@style/TextAppearance.Compat.Notification.Time" android:textSize="11sp" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/txt_youtube_view_count" android:layout_width="0dp" android:layout_height="match_parent" android:maxLines="1" android:singleLine="true" android:layout_weight="1" android:textAllCaps="false"/>
+                    <ImageView android:id="@+id/img_options" android:layout_width="wrap_content" android:layout_height="25dp" android:src="@drawable/ic_share_new"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.p003v7.widget.CardView>
+</FrameLayout>

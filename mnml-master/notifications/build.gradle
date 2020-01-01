@@ -1,0 +1,33 @@
+apply from: '../dependencies.gradle'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.compileSdk
+    versionCode versions.publishVersionCode
+    versionName versions.publishVersion
+  }
+
+  //testOptions {
+  //  unitTests {
+  //    includeAndroidResources = true
+  //  }
+  //}
+}
+
+dependencies {
+  implementation project(':common')
+
+  // Kotlin
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:' + versions.coroutines
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:' + versions.coroutines
+
+  // testImplementation 'org.robolectric:robolectric:' + versions.robolectric
+}
+
+apply from: '../spotless.gradle'

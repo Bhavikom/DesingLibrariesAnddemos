@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/dim_80_background_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.p003v7.widget.CardView android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="17dp" app:cardPreventCornerOverlap="true" app:contentPadding="0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:padding="3dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:id="@+id/txt_dialog_title" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/app_name" android:drawablePadding="10dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="#b4b4b4" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <TextView android:textColor="@color/colorPrimary" android:id="@+id/txt_dialog_desc" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/enjoy_app"/>
+            <TextView android:id="@+id/txt_note_settings" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="10dp" android:layout_marginRight="5dp"/>
+            <View android:id="@+id/view_line" android:background="#b4b4b4" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="8dp"/>
+            <android.support.p003v7.widget.AppCompatRatingBar android:layout_gravity="center" android:id="@+id/rating_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5"/>
+            <LinearLayout android:id="@+id/linear_lay_btn" android:visibility="visible" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="6dp">
+                <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:id="@+id/txt_later" android:background="@drawable/dialog_white_selector" android:padding="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/not_really" android:layout_weight="1"/>
+                <View android:background="@color/cardview_dark_background" android:layout_width="1dp" android:layout_height="match_parent"/>
+                <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" android:gravity="center" android:id="@+id/txt_yes" android:background="@drawable/dialog_blue_selector" android:padding="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/yes" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.p003v7.widget.CardView>
+</FrameLayout>

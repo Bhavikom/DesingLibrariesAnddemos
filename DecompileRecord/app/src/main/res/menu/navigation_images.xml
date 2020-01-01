@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_my_screenshots"
+        android:icon="@drawable/ic_device_on"
+        android:title="@string/on_device" />
+    <item
+        android:id="@+id/navigation_all_screenshots"
+        android:icon="@drawable/ic_img_cloud"
+        android:title="@string/on_cloud" />
+</menu>

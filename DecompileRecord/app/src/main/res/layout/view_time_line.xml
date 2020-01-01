@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_surface_view" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/layout">
+        <VideoView android:id="@+id/video_loader" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <ImageView android:id="@+id/icon_video_play" android:background="@drawable/play_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/layout" android:background="@color/background_video_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:id="@+id/lineViewTop" android:background="@drawable/line_seperator_for_view_horizontal" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentTop="true"/>
+        <RelativeLayout android:id="@+id/timeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/lineViewTop">
+            <TextView android:textColor="@android:color/white" android:id="@+id/textSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+            <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@+id/textTimeSelection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/textTime" android:layout_toRightOf="@+id/textSize" android:layout_toStartOf="@+id/textTime" android:layout_toEndOf="@+id/textSize"/>
+            <TextView android:textColor="@android:color/white" android:id="@+id/textTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <SeekBar android:layout_gravity="center_horizontal" android:id="@+id/handlerTop" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="1000" android:secondaryProgress="0" android:progressDrawable="@android:color/transparent" android:thumb="@drawable/apptheme_text_select_handle_middle" android:layout_below="@+id/timeText"/>
+        <life.knowledge4.videotrimmer.view.ProgressBarView android:id="@+id/timeVideoView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/handlerTop"/>
+        <life.knowledge4.videotrimmer.view.TimeLineView android:id="@+id/timeLineView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/timeVideoView"/>
+        <life.knowledge4.videotrimmer.view.RangeSeekBarView android:id="@+id/timeLineBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignTop="@+id/timeLineView"/>
+        <View android:id="@+id/lineTop" android:background="@drawable/line_seperator_for_btn_horizontal" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/timeLineBar"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/lineTop">
+            <Button android:textColor="@android:color/white" android:id="@+id/btCancel" android:background="@color/colorPrimaryDark" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1"/>
+            <View android:background="@drawable/line_seperator_for_btn_vertical" android:layout_width="0.7dp" android:layout_height="match_parent"/>
+            <Button android:textColor="@android:color/white" android:id="@+id/btSave" android:background="@color/colorPrimaryDark" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/save" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

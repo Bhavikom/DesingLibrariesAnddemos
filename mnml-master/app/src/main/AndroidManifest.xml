@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.afollestad.mnmlscreenrecord">
+
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <uses-permission android:name="TASKS"/>
+
+  <application
+      android:name=".MnmlApp"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+    <activity
+        android:name=".ui.main.MainActivity"
+        android:label="@string/app_name_short"
+        android:launchMode="singleInstance">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+
+      <meta-data
+          android:name="android.app.shortcuts"
+          android:resource="@xml/shortcuts"/>
+    </activity>
+
+    <activity
+        android:name=".ui.settings.SettingsActivity"
+        android:label="@string/settings">
+      <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+        android:name=".shortcuts.ShortcutRelayActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/AppTheme.Transparent">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+      </intent-filter>
+    </activity>
+
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts"/>
+
+  </application>
+
+</manifest>

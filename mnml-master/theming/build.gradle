@@ -1,0 +1,33 @@
+apply from: '../dependencies.gradle'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.compileSdk
+    versionCode versions.publishVersionCode
+    versionName versions.publishVersion
+  }
+}
+
+dependencies {
+  implementation project(':common')
+
+  // Needed for md_ attributes in styles.xml
+  implementation 'com.afollestad.material-dialogs:core:' + versions.materialDialogs
+
+  // Kotlin
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
+
+  // Google/AndroidX
+  api 'com.google.android.material:material:' + versions.androidxMaterial
+
+  // Testing
+  testImplementation 'junit:junit:' + versions.junit
+  testImplementation 'com.google.truth:truth:' + versions.truth
+}
+
+apply from: '../spotless.gradle'

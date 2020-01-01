@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#e5e5e5" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/Theme.AppCompat.Light" android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="15" app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/id_live_facebook_start_button" app:layout_constraintEnd_toStartOf="@+id/id_vertical_end_guideline" app:layout_constraintStart_toEndOf="@+id/id_vertical_start_guideline" app:layout_constraintTop_toBottomOf="@+id/appbar">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30dp">
+            <p008de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center" android:id="@+id/id_live_facebook_profile_image" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/ic_live_facebook"/>
+            <ProgressBar android:id="@+id/id_live_facebook_progressbar" android:visibility="invisible" android:layout_width="120dp" android:layout_height="120dp" android:indeterminate="true" android:indeterminateDrawable="@drawable/ic_intermediate_circularprogressbar" android:interpolator="@android:anim/cycle_interpolator"/>
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="10sp" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stream Title"/>
+            <android.support.p003v7.widget.AppCompatEditText android:id="@+id/id_live_facebook_stream_title_edit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:hint="Please enter the stream title" android:maxLines="1" android:ems="20" android:inputType="text"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="10sp" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stream On"/>
+            <android.support.p003v7.widget.AppCompatSpinner android:entries="@array/id_facebook_live_stream_on_options" android:id="@+id/id_live_facebook_stream_on_spinner" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/id_live_facebook_page_type_container" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+            <android.support.p003v7.widget.AppCompatTextView android:textSize="10sp" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose Page"/>
+            <android.support.p003v7.widget.AppCompatSpinner android:id="@+id/id_live_facebook_page_type_spinner" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.p003v7.widget.AppCompatButton android:textColor="@android:color/white" android:id="@+id/id_live_facebook_start_button" android:background="@drawable/ic_live_start_button" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Start" app:layout_constraintBottom_toTopOf="@+id/id_horizontal_bottom_guideline" app:layout_constraintEnd_toStartOf="@+id/id_vertical_end_guideline" app:layout_constraintStart_toEndOf="@+id/id_vertical_start_guideline"/>
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@+id/id_vertical_start_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.15"/>
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@+id/id_vertical_end_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.85"/>
+    <android.support.constraint.Guideline android:orientation="horizontal" android:id="@+id/id_horizontal_bottom_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.95"/>
+</android.support.constraint.ConstraintLayout>

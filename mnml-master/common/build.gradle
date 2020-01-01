@@ -1,0 +1,40 @@
+apply from: '../dependencies.gradle'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.compileSdk
+    versionCode versions.publishVersionCode
+    versionName versions.publishVersion
+  }
+}
+
+dependencies {
+  // Kotlin
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:' + versions.coroutines
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:' + versions.coroutines
+
+  // RxJava
+  api 'io.reactivex.rxjava2:rxandroid:' + versions.rxAndroid
+
+  // Google/AndroidX
+  api 'androidx.appcompat:appcompat:' + versions.androidxCore
+  api 'androidx.browser:browser:' + versions.androidxBrowser
+  implementation 'androidx.recyclerview:recyclerview:' + versions.androidxRecyclerView
+
+  // Koin
+  api 'org.koin:koin-android:' + versions.koin
+
+  // afollestad
+  api 'com.afollestad:rxkprefs:' + versions.rxkPrefs
+
+  // Debug
+  api 'com.jakewharton.timber:timber:' + versions.timber
+}
+
+apply from: '../spotless.gradle'

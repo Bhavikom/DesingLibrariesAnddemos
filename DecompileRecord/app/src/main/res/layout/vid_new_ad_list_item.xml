@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.p003v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp" android:foreground="?android:attr/selectableItemBackground" app:cardCornerRadius="4dp" app:cardElevation="4dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="false" app:contentPadding="4dp">
+    <com.google.android.gms.ads.formats.UnifiedNativeAdView android:id="@+id/id_native_video_ad_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/id_native_video_app_icon_imageview" android:background="@android:color/darker_gray" android:layout_width="80dp" android:layout_height="80dp" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="top|left|center_vertical|center_horizontal|center|start" android:background="#ffb017" android:paddingTop="1dp" android:paddingBottom="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_ad_tag_txt" android:paddingStart="2dp" android:paddingEnd="2dp"/>
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingStart="5dp" android:paddingEnd="5dp">
+                <TextView android:textSize="15sp" android:textStyle="bold" android:ellipsize="end" android:id="@+id/id_native_video_title_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+                <TextView android:textSize="12sp" android:ellipsize="end" android:id="@+id/id_native_video_subTitle_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/id_native_video_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="#3fbe9c"/>
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+</android.support.p003v7.widget.CardView>

@@ -1,0 +1,56 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.afollestad.mnmlscreenrecord.engine">
+
+  <uses-permission android:name="android.permission.VIBRATE"/>
+
+  <application>
+
+    <service
+        android:name=".service.BackgroundService"
+        android:enabled="true"
+        android:exported="false"/>
+
+    <service
+        android:name=".quicksetting.QuickSettingService"
+        android:icon="@drawable/ic_quick_setting_record"
+        android:label="@string/quick_setting_name"
+        android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+      <intent-filter>
+        <action
+            android:name="android.service.quicksettings.action.QS_TILE"/>
+      </intent-filter>
+    </service>
+
+    <activity
+        android:name=".permission.CapturePermissionActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/AppTheme.Transparent"/>
+
+    <activity
+        android:name=".permission.StoragePermissionActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/AppTheme.Transparent"/>
+
+    <activity
+        android:name=".permission.OverlayPermissionActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/AppTheme.Transparent"/>
+
+    <activity
+        android:name=".service.ErrorDialogActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/AppTheme.Transparent"/>
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="com.afollestad.mnmlscreenrecord.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/provider_paths"/>
+    </provider>
+
+  </application>
+
+</manifest>

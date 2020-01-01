@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ezscreenrecorder.imgedit.fabric.DrawingView
+        android:id="@+id/id_recording_drawing_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toTopOf="0" />
+
+    <LinearLayout
+        android:id="@+id/id_draw_on_rec_seek_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/id_custom_draw_on_rec_layout_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/id_draw_on_rec_main_btn_container"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_custom_draw_on_rec_circle_shape_small" />
+
+                <SeekBar
+                    android:id="@+id/id_draw_on_rec_brush_size_seek_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="50" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_custom_draw_on_rec_circle_shape_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_color" />
+
+                <com.ezscreenrecorder.imgedit.colorseekbar.ColorSeekBar
+                    android:id="@+id/id_draw_on_rec_brush_color_seek_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:visibility="visible"
+                    app:barHeight="12dp"
+                    app:colorSeeds="@array/material_colors"
+                    app:isVertical="false"
+                    app:showAlphaBar="false"
+                    app:thumbHeight="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/id_draw_on_rec_close_seek_bar_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_draw_on_rec_main_btn_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/id_custom_draw_on_rec_layout_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0">
+
+        <ImageButton
+            android:id="@+id/id_draw_on_recording_pencil_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/id_custom_draw_on_rec_btn"
+            android:src="@drawable/ic_pencil" />
+
+        <ImageButton
+            android:id="@+id/id_draw_on_recording_erase_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/id_custom_draw_on_rec_btn"
+            android:src="@drawable/ic_eraser" />
+
+        <ImageButton
+            android:id="@+id/id_draw_on_recording_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/id_custom_draw_on_rec_btn"
+            android:src="@drawable/ic_close" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.ezscreenrecorder.imgedit.crop.CropImageView
+        android:id="@+id/img_crop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/lay_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_gradient"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/txt_rotate_left"
+            style="@style/ColoredButtonTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_rotate_left"
+            android:text="@string/rotate_left" />
+
+        <Button
+            android:id="@+id/txt_rotate_right"
+            style="@style/ColoredButtonTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_rotate_right"
+            android:text="@string/rotate_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_flip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_gradient"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/txt_flip_horizontal"
+            style="@style/ColoredButtonTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_flip_horizontal"
+            android:text="@string/id_flip_horizontal_txt" />
+
+        <Button
+            android:id="@+id/txt_flip_vertical"
+            style="@style/ColoredButtonTransparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_flip_vertical"
+            android:text="@string/id_flip_vertical_txt" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@mipmap/ic_screenshot_drawer" android:id="@+id/action_screenshot" android:title="@string/take_screen_shot"/>
+    <item android:icon="@mipmap/ic_screen_recording" android:id="@+id/action_screen_recording" android:title="@string/screen_recording"/>
+    <item android:icon="@mipmap/ic_feedback_drawer" android:id="@+id/action_feedback" android:title="@string/feedback"/>
+    <item android:icon="@mipmap/ic_rate_drawer" android:id="@+id/action_rate_us" android:title="@string/rate_us"/>
+    <item android:icon="@mipmap/ic_other_drawer" android:id="@+id/action_apps" android:title="@string/action_apps"/>
+    <item android:icon="@mipmap/ic_help" android:id="@+id/action_help" android:title="@string/help_drawer"/>
+    <item android:icon="@drawable/ic_faq" android:id="@+id/action_faq" android:title="FAQ"/>
+    <item android:icon="@drawable/ic_share_new" android:id="@+id/action_share" android:title="@string/invite_friends"/>
+</menu>

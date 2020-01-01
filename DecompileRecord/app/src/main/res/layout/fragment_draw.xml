@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/lay_draw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_draw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ezscreenrecorder.imgedit.fabric.DrawingView
+            android:id="@+id/draw_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <com.ezscreenrecorder.imgedit.fabric.numberpicker.NumberPicker
+            android:id="@+id/num_picker_pencil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            app:np_dividerColor="@android:color/white"
+            app:np_orientation="0"
+            app:np_selectedTextColor="@android:color/white"
+            app:np_textColor="@android:color/white" />
+
+        <com.ezscreenrecorder.imgedit.fabric.numberpicker.NumberPicker
+            android:id="@+id/num_picker_eraser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            app:np_dividerColor="@android:color/white"
+            app:np_orientation="0"
+            app:np_selectedTextColor="@android:color/white"
+            app:np_textColor="@android:color/white" />
+
+        <com.ezscreenrecorder.imgedit.colorseekbar.ColorSeekBar
+            android:id="@+id/color_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:barHeight="12dp"
+            app:colorSeeds="@array/material_colors"
+            app:isVertical="false"
+            app:showAlphaBar="false"
+            app:thumbHeight="15dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_gradient"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_pencil"
+                style="@style/ColoredButtonTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_pencil"
+                android:text="@string/pencil" />
+
+            <Button
+                android:id="@+id/btn_color"
+                style="@style/ColoredButtonTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_color"
+                android:text="@string/color" />
+
+            <Button
+                android:id="@+id/btn_eraser"
+                style="@style/ColoredButtonTransparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_eraser"
+                android:text="@string/eraser" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

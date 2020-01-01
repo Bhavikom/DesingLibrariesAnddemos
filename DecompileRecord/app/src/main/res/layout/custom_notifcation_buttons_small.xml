@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/img_app_icon" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/ic_launcher"/>
+    <TextView android:textColor="@android:color/black" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/app_name" android:maxLines="1" android:singleLine="true" android:layout_weight="2"/>
+    <ImageView android:id="@+id/btn_camera" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:src="@mipmap/cemra" android:layout_weight="1"/>
+    <ImageView android:id="@+id/btn_video" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:src="@mipmap/video" android:layout_weight="1"/>
+    <ImageView android:id="@+id/btn_go_live" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:src="@drawable/ic_noti_go_live_img" android:layout_weight="1"/>
+    <ImageView android:id="@+id/btn_gallery" android:padding="5dp" android:layout_width="0dp" android:layout_height="45dp" android:src="@mipmap/gallery" android:layout_weight="1"/>
+    <ImageView android:id="@+id/btn_more_button" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="0dp" android:layout_height="45dp" android:src="@drawable/ic_noti_more_img" android:layout_weight="1"/>
+</LinearLayout>

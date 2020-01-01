@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout android:id="@+id/txt_lay_title" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Title"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout android:id="@+id/txt_lay_desc" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Description"/>
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

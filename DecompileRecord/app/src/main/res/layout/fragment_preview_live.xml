@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/id_preview_screen_video_action_content_area" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="120dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/id_preview_screen_video_preview" android:background="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="150dp" android:src="@drawable/ic_storage_permission_error" android:adjustViewBounds="true"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/img_play_video" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="50dp" android:src="@drawable/play_button" android:adjustViewBounds="true"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <android.support.p003v7.widget.AppCompatTextView android:textSize="11sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name:  "/>
+                <android.support.p003v7.widget.AppCompatTextView android:textSize="11sp" android:textColor="@android:color/holo_blue_light" android:id="@+id/id_preview_screen_video_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <View android:background="#595959" android:layout_width="1.25dp" android:layout_height="match_parent" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                <android.support.p003v7.widget.AppCompatTextView android:textSize="11sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Size:  "/>
+                <android.support.p003v7.widget.AppCompatTextView android:textSize="11sp" android:id="@+id/id_preview_screen_video_size" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/id_preview_screen_video_option_buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/id_preview_screen_video_action_content_area">
+            <GridLayout android:id="@+id/id_preview_screen_video_grid_layout" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="150dp" android:rowCount="2" android:rowOrderPreserved="true" android:columnCount="4" android:columnOrderPreserved="true" android:alignmentMode="alignMargins">
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_trim" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_trim_imageview" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_trim_new" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_trim_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/trim" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_delete" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_delete_imageview" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_delete_new" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_delete_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/delete" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_upload_to_youtube" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_upload_to_youtube_imageview" android:layout_width="30dp" android:layout_height="30dp" android:src="@mipmap/ic_you_tube" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_upload_to_youtube_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/upload_to_youtube" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_share_1" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_share_1_imageview" android:layout_width="30dp" android:layout_height="30dp" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_share_1_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_share_2" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_share_2_imageview" android:layout_width="30dp" android:layout_height="30dp" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_share_2_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_share_3" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_share_3_imageview" android:layout_width="30dp" android:layout_height="30dp" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_share_3_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_share_4" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/id_preview_screen_video_gridlayout_option_share_4_imageview" android:layout_width="30dp" android:layout_height="30dp" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:id="@+id/id_preview_screen_video_gridlayout_option_share_4_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+                <android.support.p003v7.widget.CardView android:layout_gravity="fill" android:id="@+id/id_preview_screen_video_gridlayout_option_more" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:foreground="?android:attr/selectableItemBackground" android:layout_rowWeight="1" android:layout_columnWeight="1" app:cardCornerRadius="2dp" app:cardElevation="0dp">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:minHeight="60dp" android:layout_weight="1">
+                        <ImageView android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_more" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="11sp" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/id_more_text" android:maxLines="2" android:minLines="2"/>
+                    </LinearLayout>
+                </android.support.p003v7.widget.CardView>
+            </GridLayout>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.gms.ads.formats.UnifiedNativeAdView android:layout_gravity="center_horizontal" android:id="@+id/id_preview_screen_native_ad_view" android:background="#b9b9b9" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:layout_constraintTop_toBottomOf="@+id/id_preview_screen_video_option_buttons">
+                    <android.support.constraint.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                            <LinearLayout android:orientation="vertical" android:id="@+id/id_preview_dialog_ad_container" android:layout_width="match_parent" android:layout_height="150dp" android:maxHeight="120dp">
+                                <com.google.android.gms.ads.formats.MediaView android:id="@+id/id_preview_screen_mediaview" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <ImageView android:id="@+id/id_preview_screen_imageview" android:background="@color/colorPrimary" android:layout_width="60dp" android:layout_height="60dp" android:adjustViewBounds="true"/>
+                                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginStart="10dp">
+                                        <android.support.p003v7.widget.AppCompatTextView android:textStyle="bold" android:id="@+id/id_preview_screen_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="lmnaslmd asdasda" android:maxLines="1"/>
+                                        <android.support.p003v7.widget.AppCompatTextView android:textSize="11sp" android:id="@+id/id_preview_screen_subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="lmnaslmd asdasda" android:maxLines="2"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <FrameLayout android:layout_gravity="center" android:id="@+id/id_preview_screen_button_view" android:background="@drawable/id_preview_dialog_native_ad_button_shape" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:stateListAnimator="@anim/button_elevation">
+                                    <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@+id/id_preview_screen_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use App" android:ems="15"/>
+                                </FrameLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView android:textSize="9dp" android:textColor="@android:color/white" android:gravity="center" android:background="#ffb017" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_ad_tag_txt" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    </android.support.constraint.ConstraintLayout>
+                </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

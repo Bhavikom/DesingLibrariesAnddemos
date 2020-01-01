@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity"
+    >
+
+  <include layout="@layout/include_appbar"/>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/content_inset_double"
+        android:scrollbars="vertical"
+        />
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/content_inset_half"
+          android:text="@string/recordings_empty_text"
+          android:textAppearance="@style/AppTheme.TextAppearance.EmptyText"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginBottom="@dimen/content_inset_more"
+          android:text="@string/recordings_empty_text_emoji"
+          android:textAppearance="@style/AppTheme.TextAppearance.EmptyTextEmoji"
+          />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="@dimen/content_inset"
+        android:layout_marginEnd="@dimen/content_inset_more"
+        android:minHeight="64dp"
+        android:paddingBottom="@dimen/content_inset_half"
+        android:paddingEnd="@dimen/content_inset"
+        android:paddingStart="@dimen/content_inset"
+        android:paddingTop="@dimen/content_inset_half"
+        android:text="@string/start_recording"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/ic_record_32dp"
+        app:iconTint="#fff"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        />
+
+  </FrameLayout>
+
+</LinearLayout>

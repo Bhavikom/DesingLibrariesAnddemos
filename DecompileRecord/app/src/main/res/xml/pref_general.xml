@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <PreferenceCategory android:title="@string/video_settings">
+        <ListPreference android:icon="@drawable/ic_resolution" android:entries="@array/pref_resolution_list_titles" android:title="@string/resolution" android:key="example_list_resolution" android:defaultValue="1" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_resolution_list_values"/>
+        <ListPreference android:icon="@drawable/ic_frame_rate" android:entries="@array/pref_frame_rate_list_titles" android:title="@string/frame_rate" android:key="example_list_frame_rate" android:defaultValue="1" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_frame_rate_list_values"/>
+        <ListPreference android:icon="@drawable/ic_bitrate" android:entries="@array/pref_bit_rate_list_titles" android:title="@string/bit_rate" android:key="example_list_bit_rate" android:defaultValue="1" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_bit_rate_list_values"/>
+        <ListPreference android:icon="@drawable/ic_orientation" android:entries="@array/pref_orientation_list_titles" android:title="@string/orientation" android:key="example_list_orientation" android:defaultValue="1" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_orientation_list_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/recording_options_title">
+        <SwitchPreferenceCompat android:icon="@drawable/ic_screen_lock" android:title="@string/lock_stop_title" android:key="notifications_screen_off" android:summary="@string/lock_stop_desc" android:defaultValue="false"/>
+        <ListPreference android:icon="@drawable/ic_count_down" android:entries="@array/pref_count_down_list_titles" android:title="@string/count_down" android:key="example_list_count_down" android:summary="@string/count_down_desc" android:defaultValue="3" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_count_down_list_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/audio_settings">
+        <SwitchPreferenceCompat android:icon="@drawable/ic_record_audio" android:title="@string/record_audio" android:key="notifications_audio" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/touch_settings">
+        <SwitchPreferenceCompat android:icon="@drawable/ic_show_touches" android:title="@string/show_touches" android:key="notifications_touches" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="YouTube Settings">
+        <Preference android:icon="@drawable/ic_email" android:title="YouTube Account" android:key="notifications_youtube_account"/>
+    </PreferenceCategory>
+</PreferenceScreen>

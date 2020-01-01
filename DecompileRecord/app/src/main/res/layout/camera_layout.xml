@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <com.ezscreenrecorder.float_camera.StickerCameraView2
+        android:id="@+id/camera_preview"
+        android:layout_width="300dp"
+        android:layout_height="400dp" />
+</FrameLayout>

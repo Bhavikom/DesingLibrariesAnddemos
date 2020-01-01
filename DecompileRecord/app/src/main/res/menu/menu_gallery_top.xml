@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/ic_game_list_toolbar_24dp" android:id="@+id/action_game_list" android:title="@string/id_record_game_txt" app:iconTint="@android:color/white" app:showAsAction="always"/>
+    <item android:icon="@drawable/ic_social_feeds_img_24dp" android:id="@+id/action_social_feed" android:title="@string/facebook" app:iconTint="@android:color/white" app:showAsAction="always"/>
+    <item android:icon="@drawable/ic_settings_toolbar_24dp" android:id="@+id/action_settings" android:title="@string/txt_settings" app:iconTint="@android:color/white" app:showAsAction="always"/>
+</menu>

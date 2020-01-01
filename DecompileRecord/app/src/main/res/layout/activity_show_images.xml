@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main_content" android:background="@android:color/black" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.lsjwzh.widget.recyclerviewpager.RecyclerViewPager android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:layout_gravity="top" android:id="@+id/appbar" android:background="@color/dim_80_background_color" android:paddingTop="25dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" style="@style/ToolBarStyle.Event"/>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>

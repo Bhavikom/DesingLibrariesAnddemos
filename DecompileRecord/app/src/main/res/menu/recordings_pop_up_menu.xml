@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/action_add_to_favorite" android:title="@string/id_add_to_favorite_txt"/>
+    <item android:id="@+id/action_remove_favorite" android:title="@string/id_remove_txt"/>
+    <item android:id="@+id/action_share" android:title="@string/share"/>
+</menu>

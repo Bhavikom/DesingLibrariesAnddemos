@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.p003v7.widget.Toolbar android:id="@+id/toolbar" android:background="?android:attr/colorPrimary" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" style="@style/ToolBarStyle.Event"/>
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.p000v4.widget.SwipeRefreshLayout android:id="@+id/id_swipe_refresh" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:backgroundTint="@color/colorPrimary">
+            <android.support.p003v7.widget.RecyclerView android:id="@+id/id_recycler_view" android:paddingBottom="70dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </android.support.p000v4.widget.SwipeRefreshLayout>
+        <android.support.p003v7.widget.AppCompatTextView android:gravity="center" android:layout_gravity="center" android:id="@+id/id_empty_error_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_no_internet_error_list_message" android:drawableTop="@drawable/ic_no_internet_connection"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/id_more_videos_background_dim_view" android:background="#cc000000" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <include layout="@layout/custom_more_videos_bottom_sheet_layout"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/tst" android:background="@color/dim_80_background_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout android:layout_gravity="center" android:id="@+id/lay_main" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:layout_marginStart="30dp" android:layout_marginEnd="30dp">
+        <android.support.constraint.Guideline android:orientation="vertical" android:id="@+id/id_native_ad_separator" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.45"/>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/linearLayout" android:background="@color/colorPrimary" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_launcher"/>
+            <TextView android:textSize="22sp" android:textColor="@color/colorWhite" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/app_name" android:maxLines="1" android:singleLine="true" android:layout_weight="1" android:fontFamily="sans-serif-light" android:paddingStart="5dp"/>
+            <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/img_more" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout2" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            <FrameLayout android:id="@+id/id_land_native_ad_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.55" android:layout_marginEnd="10dp">
+                <com.google.android.gms.ads.formats.UnifiedNativeAdView android:layout_gravity="center" android:id="@+id/id_install_native_ad_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_gravity="center" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:layout_gravity="top" android:id="@+id/id_native_ad_dialog_imageview_container" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <com.google.android.gms.ads.formats.MediaView android:layout_gravity="top|center_vertical|center_horizontal|center" android:id="@+id/id_native_ad_dialog_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                            <TextView android:textSize="9dp" android:textColor="@android:color/white" android:gravity="center" android:background="#ffb017" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ad"/>
+                        </FrameLayout>
+                        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:background="#bf000000" android:padding="2dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@+id/id_native_ad_dialog_icon" android:layout_width="60dp" android:layout_height="60dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingStart="5dp" android:paddingEnd="5dp">
+                                <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/id_native_ad_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                                <TextView android:textSize="12sp" android:textColor="@android:color/white" android:ellipsize="end" android:id="@+id/id_native_ad_dialog_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+                            </LinearLayout>
+                            <Button android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@+id/id_native_ad_dialog_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="#3fbe9c"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+            </FrameLayout>
+            <FrameLayout android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.45">
+                <ImageView android:id="@+id/img_video_thumbnail" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/img_play_video" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/play_button" android:scaleType="center"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout2" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+            <ImageView android:id="@+id/img_share_video" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_share_new" android:tint="@android:color/white" android:layout_weight="1"/>
+            <View android:background="@android:color/white" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageView android:id="@+id/img_edit_image" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_img_edit" android:tint="@android:color/white" android:layout_weight="1"/>
+            <View android:id="@+id/line_img_edit" android:background="@android:color/white" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageView android:id="@+id/img_delete_video" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_delete_new" android:tint="@android:color/white" android:layout_weight="1"/>
+            <View android:id="@+id/view_like_rate" android:background="@android:color/white" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <ImageView android:id="@+id/img_like_rate" android:background="@drawable/img_selector" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/ic_like_share" android:layout_weight="1"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

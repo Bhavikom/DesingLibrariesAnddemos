@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ezscreenrecorder">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="com.yasoka.eazyscreenrecord.RecorderApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="auto"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.VideoToGifActivity"
+            android:label="@string/title_activity_video_to_gif"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverStopRecord" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverPauseRecord" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverResumeRecord" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverStopBubble" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverShowBubble" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverScreenShot" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverVideoRecording" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.BroadcastReceiverAudioRecording" />
+        <receiver android:name="com.yasoka.eazyscreenrecord.receivers.NotificationActionBroadcastReceiver" />
+
+        <service
+            android:name="com.yasoka.eazyscreenrecord.FloatingService"
+            android:exported="true" />
+
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.RecordingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.GalleryActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ShowImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.TakeTourLaunchActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.TrimVideoActivity" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ShowVideoDialogActivity"
+            android:theme="@style/Theme.AppCompat.TransparentDialog" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ShowAudioDialogActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.TransparentDialog" />
+
+        <service android:name="com.ezscreenrecorder.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ezscreenrecorder.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.yasoka.eazyscreenrecord.youtubeupload.UploadService"
+            android:exported="false"
+            android:process=":ezuploadservice" />
+
+        <receiver
+            android:name="com.yasoka.eazyscreenrecord.youtubeupload.CancelBroadCastReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.CheckYouTubeActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.MyWebViewActivity" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.DrawOverAppsPermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ShowImageActivity"
+            android:theme="@style/AppTheme2"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.yasoka.eazyscreenrecord.youtubeupload.StartYouTubeUploadReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.video.NewVideoPlayerActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:mimeType="video/mp4" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.imgedit.ImageEditActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.yasoka.eazyscreenrecord.imgupload.ImageUploadService" />
+        <service android:name="com.yasoka.eazyscreenrecord.imgdownload.ImageDownloadService" />
+
+        <receiver
+            android:name="com.yasoka.eazyscreenrecord.imgupload.CopiedReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.yasoka.eazyscreenrecord.imgupload.CancelReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.FullscreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.EditMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ExplainerVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ExplainerVideoHelpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.ShowPreviewScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.MoreVideosActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.GamesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+        <!--<meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenOrientation|screenLayout|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/com_facebook_activity_theme" />-->
+        <!--<activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.LiveLoginActivity"
+            android:theme="@style/Theme.AppCompat.TransparentDialog" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_facebook.LiveFacebookStartActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_facebook.LiveFacebookSettingsActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.BaseToolbarActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_twitch.LiveTwitchLoginActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_twitch.LiveTwitchStartActivity" />
+        <activity
+            android:name="com.yasoka.eazyscreenrecord.activities.live_twitch.LiveTwitchGameListActivity"
+            android:theme="@style/Theme.AppCompat.TransparentDialog" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_twitch.LiveTwitchSettingsActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_youtube.LiveYoutubeStartActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_youtube.LiveYoutubeSettingsActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.live_youtube.LiveYoutubeEnableStreamingActivity" />
+        <activity android:name="com.yasoka.eazyscreenrecord.activities.SocialFeedsActivity" />
+
+        <provider
+            android:name="com.yasoka.eazyscreenrecord.utils.GenericFileProvider"
+            android:authorities="com.ezscreenrecorder.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_noti_launcher_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--<activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:configChanges="keyboardHidden|screenOrientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.facebook.ads.internal.ipc.RemoteANActivity"
+            android:configChanges="keyboardHidden|screenOrientation|screenSize"
+            android:exported="false"
+            android:process=":adnw"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService"
+            android:exported="false" />
+        <service
+            android:name="com.facebook.ads.internal.ipc.AdsMessengerService"
+            android:exported="false"
+            android:process=":adnw" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.ezscreenrecorder.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|screenOrientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent" />
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:authorities="com.ezscreenrecorder.mobileadsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name="rx_activity_result2.HolderActivity"
+            android:configChanges="keyboardHidden|screenOrientation|screenSize"
+            android:theme="@style/Theme.Transparent" />
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="com.ezscreenrecorder.FacebookInitProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.facebook.CampaignTrackingReceiver"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:authorities="com.ezscreenrecorder.crashlyticsinitprovider"
+            android:exported="false"
+            android:initOrder="90" />-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0f67c06feb28a746fcd6276c4bf79020d94b514c" />
+    </application>
+</manifest>

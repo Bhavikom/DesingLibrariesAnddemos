@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="#9900318c">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_app_default_bg_img" />
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/id_draw_over_apps_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <android.support.p003v7.widget.AppCompatTextView
+            android:id="@+id/id_draw_over_apps_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/id_draw_over_apps_message_for_user"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:autoSizeTextType="1"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_draw_over_apps_image_view_bg"
+            android:src="@drawable/ic_draw_over_apps_settings_img"
+            app:layout_constraintBottom_toTopOf="@+id/id_draw_over_apps_button_container"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/id_draw_over_apps_message_tv" />
+
+        <LinearLayout
+            android:id="@+id/id_draw_over_apps_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="0">
+
+            <android.support.p003v7.widget.AppCompatButton
+                android:id="@+id/id_draw_over_apps_positive_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffd700"
+                android:ems="20"
+                android:text="@string/id_turn_it_on_txt" />
+
+            <android.support.p003v7.widget.AppCompatButton
+                android:id="@+id/id_draw_over_apps_negative_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffd700"
+                android:ems="20"
+                android:text="@string/id_draw_over_apps_notification_button_txt" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

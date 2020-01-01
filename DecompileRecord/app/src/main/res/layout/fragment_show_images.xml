@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/activity_show_image" android:background="@android:color/black" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_place_holder" android:padding="80dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/ic_default_image"/>
+    <com.ezscreenrecorder.utils.TouchImageView android:id="@+id/img_touch_image" android:layout_width="match_parent" android:layout_height="match_parent" android:adjustViewBounds="true"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/progress_view" android:background="@color/black_translucent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.ezscreenrecorder.imgedit.ProgressWheel android:layout_width="60dp" android:layout_height="60dp" app:matProg_barColor="@color/colorWhite" app:matProg_progressIndeterminate="true"/>
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/id_loading_txt"/>
+    </LinearLayout>
+</FrameLayout>
